@@ -11,11 +11,11 @@ class Db
             #$this->_db = new PDO('mysql:host=localhost;dbname=bdbn;charset=utf8', 'root', '');
 			$this->_db = new PDO("pgsql:" . sprintf(
 				"host=%s;port=%s;user=%s;password=%s;dbname=%s",
-				$db["host"],
-    			$db["port"],
-    			$db["user"],
-    			$db["pass"],
-    			ltrim($db["path"], "/")
+				$env["host"],
+    			$env["port"],
+    			$env["user"],
+    			$env["pass"],
+    			ltrim($env["path"], "/")
 			));
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
