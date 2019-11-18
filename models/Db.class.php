@@ -17,8 +17,10 @@ class Db
     			$env["pass"],
     			ltrim($env["path"], "/")
 			));
-            $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+		
+		
+            //$this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		//	$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
         } 
 		catch (PDOException $e) {
 		    die('Erreur de connexion à la base de données : '.$e->getMessage());
